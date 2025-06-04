@@ -38,10 +38,17 @@ export default function WeatherCard() {
     fetchWeather();
   }, []);
 
+  const getTemperatureIcon = (feelsLike) => {
+    if (feelsLike <= 20) return "❄️";
+    if (feelsLike < 30) return "🌤️";
+    return "🔥";
+  };
+
   return (
     <div className="weather-container">
       {weatherData.map((city, index) => (
         <div key={index} className="weather-card">
+          <div className="icon-top-left">{getTemperatureIcon(city.feels_like)}</div>
           <h3>{city.name}</h3>
           <p>{city.description}</p>
           <p>🌡 טמפ' נמדדת: {city.temp}°C</p>
@@ -50,5 +57,6 @@ export default function WeatherCard() {
         </div>
       ))}
     </div>
-  )
-    }
+  );
+  
+}
