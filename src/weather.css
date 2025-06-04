@@ -1,0 +1,31 @@
+.weather-container {
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    direction: rtl; 
+    justify-content: center; 
+    padding: 20px; 
+  }
+  
+  .weather-card {
+    border: 1px solid #ccc; 
+    border-radius: 12px; 
+    padding: 20px; 
+    width: 200px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    background-color: #f9f9f9; 
+    transition: transform 0.2s ease; 
+  }
+  
+  .weather-card:hover {
+    transform: scale(1.05); 
+    background-color: #e6f7ff; 
+  }
+  
+  body {
+    background-color: #b3e5fc; 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+  }
+  
